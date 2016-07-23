@@ -71,4 +71,5 @@ function DeleteNetwork(network) {
         var Networks = document.getElementById('Networks').value;
 	Networks--
 	document.getElementById('Networks').value = Networks;
+	document.getElementById('Save').disabled = false;
 }
