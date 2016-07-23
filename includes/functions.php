@@ -169,6 +169,8 @@ function DisplayDashboard(){
 	} elseif( isset($_POST['ifup_wlan0']) ) {
 		exec( 'ifconfig wlan0 | grep -i running | wc -l',$test );
 		if($test[0] == 0) {
+			exec( 'sudo ifdown wlan0',$return );
+			sleep(2);
 			exec( 'sudo ifup wlan0',$return );
 		} else {
 			echo 'Interface already up';
