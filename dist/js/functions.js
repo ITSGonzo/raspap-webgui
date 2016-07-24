@@ -14,8 +14,8 @@ function UpdateNetworks() {
 function AddNetwork() {
 //	existing = document.getElementById("networkbox").getElementsByTagName('div').length;
 //	existing++;
-	Networks++
 	var Networks = document.getElementById('Networks').value;
+	Networks++;
         document.getElementById('networkbox').innerHTML += '<div id="Networkbox'+Networks+'" class="Networkboxes"><div class="row"><div class="col-lg-12"><h4>Network '+Networks+'</h4> \
 		<div class="row"><div class="form-group col-md-4"><label for="code">SSID</label><input type="text" class="form-control" name="ssid'+Networks+'" onkeyup="CheckSSID(this)"></div></div> \
 		<div class="row"><div class="form-group col-md-4"><label for="code">PSK</label><input type="password" class="form-control" name="psk'+Networks+'" onkeyup="CheckPSK(this)"></div></div> \
